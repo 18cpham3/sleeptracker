@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Log Sleep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-list-header></ion-list-header>
+      <ion-item>
+        <ion-label>Sleep Start:</ion-label>
+        <ion-datetime displayFormat="M D, YY HH:mm:ss" placeholder="Select Date" [(ngModel)]="startDateTime"  min="2000" max="2100"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sleep End:</ion-label>
+        <ion-datetime displayFormat="M D, YY HH:mm:ss" placeholder="Select Time" [(ngModel)]="endDateTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <!-- ADD BUTTON -->
+    <ion-button expand="block" (click)="addEntryClicked()">
+      ADD ENTRY
+      <ion-icon slot="end" name="add-circle"></ion-icon>
+    </ion-button>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Recently Added Entry</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{recentOvernightSleepData.loggedAt}}</ion-card-subtitle>
+        <ion-card-title>{{recentOvernightSleepData.dateString()}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{recentOvernightSleepData.summaryString()}}<br>
+      </ion-card-content>
+    </ion-card>
+    
+
+</ion-content>
