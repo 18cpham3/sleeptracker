@@ -3,7 +3,7 @@
     <ion-buttons>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Overnight Sleep</ion-title>
+    <ion-title>Sleep</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,17 +13,17 @@
 
       <!-- sleeping time -->
       <ion-item class='ion-field'>
-        <ion-datetime display-format="MMM D h:mm A" picker-format="MMM D h:mm A" placeholder="Start" [(ngModel)]="sleeptime" name="sleeptime"></ion-datetime>
+        <ion-datetime display-format="MMM D h:mm A" picker-format="MMM D h:mm A" placeholder="Went to Sleep" [(ngModel)]="sleeptime" name="sleeptime"></ion-datetime>
       </ion-item>
 
       <!-- waking time -->
       <ion-item class='ion-field'>
-        <ion-datetime display-format="MMM D h:mm A" picker-format="MMM D h:mm A" placeholder="End" [(ngModel)]="waketime" name="waketime"></ion-datetime>
+        <ion-datetime display-format="MMM D h:mm A" picker-format="MMM D h:mm A" placeholder="Woke Up" [(ngModel)]="waketime" name="waketime"></ion-datetime>
       </ion-item>
 
       <!-- sleep rating -->
-      <ion-text color="light"><h4> Sleep Rating: </h4></ion-text>
-        <ion-range color="dark" min="1" max="5" snaps="true" pin="true" color="medium" [(ngModel)]="sleepRating" name="sleepRating" >
+      <ion-text color="light"><h3> Sleep Rating: </h3></ion-text>
+        <ion-range color="light" min="1" max="5" snaps="true" pin="true" color="light" [(ngModel)]="sleepRating" name="sleepRating" >
             <ion-icon name="sad-outline" slot="start" expand="round" fill="outline" color="light"></ion-icon>
             <ion-icon name="happy-outline" slot="end" expand="round" fill="outline" color="light"></ion-icon>
         </ion-range>
@@ -35,4 +35,5 @@
 
       <ion-button color="dark" type="submit">Save</ion-button>
     </form>
+
 </ion-content>
