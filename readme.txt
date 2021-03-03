@@ -16,7 +16,10 @@
 
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
-
+https://ionicons.com/
+https://ionicons.com/usage
+https://ionicframework.com/docs/api/button
+https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
