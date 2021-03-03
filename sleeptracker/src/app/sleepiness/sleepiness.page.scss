@@ -1,0 +1,33 @@
+ion-content {
+    --background: none;
+      background-image: url('/assets/imgs/nightSky.png');
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+}
+.ion-field{
+    text-align: center;
+    --border-color: transparent;
+    margin: 50px;
+}
+  
+.ion-field{
+    --background: rgba(255,255,255,0.1) !important;
+    --color: white !important;
+}
+
+ion-radio{
+    --color: white !important;
+}
+
+ion-list{
+    --ion-background-color:rgba(255,255,255,0.1) !important;
+    --color: white !important;
+}
+
+ion-card-content{
+    color: white;
+    font-size: small;
+}
+
