@@ -17,3 +17,18 @@ ion-text{
   padding-left: 2%;
   margin: 5px;
 }
+
+.ion-field{
+  --background: rgba(255,255,255,0.1) !important;
+  --color: white !important;
+}
+
+ion-range{
+  padding: 0 15px;
+  margin-bottom: 10%;
+}
+
+ion-textarea{
+  height: auto;
+  margin-bottom: 15%;
+}
