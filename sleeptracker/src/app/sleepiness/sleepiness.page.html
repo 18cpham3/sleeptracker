@@ -1,11 +1,80 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Home" icon="chevron-back"></ion-back-button>
+      <ion-back-button color = "dark" text="Home" icon="chevron-back"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+  <ion-item class='ion-field'>
+    <ion-datetime display-format="MMM D h:mm A" picker-format="MMM D h:mm A" placeholder="Date" [(ngModel)]="sleeptime" name="sleeptime"></ion-datetime>
+  </ion-item>
+
+
+<form (ngSubmit)="onSubmit()">
+  <ion-list>
+    <!-- <div class="item-content" > -->
+    <ion-radio-group value="1" >
+      <ion-list-header >
+        <ion-text color="light"><h3> I Am... </h3></ion-text>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-card-content>
+          Feeling active, vital, alert, or wide awake
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="1"></ion-radio>
+      </ion-item>
+
+      <ion-item >
+        <ion-card-content>
+          Functioning at high levels, but not at peak; able to concentrate        
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="2"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-card-content>
+          Awake, but relaxed; responsive but not fully alert
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-card-content>
+          Somewhat foggy, let down
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="4"></ion-radio>
+      </ion-item>
+      
+      <ion-item >
+        <ion-card-content>
+          Foggy; losing interest in remaining awake; slowed down
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="5"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-card-content>
+          Sleepy, woozy, fighting sleep; prefer to lie down
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="6"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-card-content>
+          No longer fighting sleep, sleep onset soon; having dream-like thoughts
+        </ion-card-content>
+        <ion-radio color="light" slot="start" value="7"></ion-radio>
+      </ion-item>
+
+      <ion-button expand="full" color="dark" type="submit">Save</ion-button>
+
+    </ion-radio-group>
+
+  </ion-list>
+</form>
 
 </ion-content>
