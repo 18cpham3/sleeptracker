@@ -26,9 +26,14 @@ ion-text{
 ion-range{
   padding: 0 15px;
   margin-bottom: 10%;
+  --bar-background: rgba(255,255,255,0.2) !important;
+  --pin-background: white !important;
+  --knob-size: 15px;
+  --bar-height:	5px;
 }
 
 ion-textarea{
   height: auto;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
+
 }
