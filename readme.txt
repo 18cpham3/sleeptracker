@@ -22,6 +22,8 @@ https://ionicframework.com/docs/api/back-button
 https://ionicframework.com/docs/api/button
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 
+https://medium.com/uxcope/bottom-navigation-issue-on-ios-android-and-ux-8851ffe7260 (Design Rationale for not including a bottom navigation bar)
+
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 
