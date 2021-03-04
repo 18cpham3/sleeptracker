@@ -6,15 +6,27 @@ ion-content {
       background-size: cover;
       text-align: center;
 }
+
+h1{
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+    padding-top: 5%;
+}
 .ion-field{
     text-align: center;
     --border-color: transparent;
-    margin: 50px;
+    margin: 40px;
 }
   
 .ion-field{
-    --background: rgba(255,255,255,0.1) !important;
+    --background: rgba(255,255,255,0.2) !important;
     --color: white !important;
+    --outline-color: white;
+}
+ion-datetime{
+    padding-left: 5%;
+    padding-bottom: 5%;
 }
 
 ion-radio{
@@ -31,3 +43,10 @@ ion-card-content{
     font-size: small;
 }
 
+ion-icon {
+    font-size: 22px;
+}
+ion-item{
+    --ion-background-color:rgba(255,255,255,0) !important;
+    --ion-border-color:rgba(255,255,255,0) !important;
+}
