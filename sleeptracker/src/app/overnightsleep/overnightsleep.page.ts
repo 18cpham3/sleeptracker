@@ -12,7 +12,6 @@ export class OvernightsleepPage implements OnInit {
   sleeptime:string;
   waketime:string;
   sleepRating:number;
-  // notes:string;
   notes:string;
 
   constructor(public sleepService:SleepService, public alertController: AlertController) { }
@@ -23,6 +22,7 @@ export class OvernightsleepPage implements OnInit {
   getText(event) {
     this.notes = event.target.value;
   }
+
   onSubmit() {
     if (this.sleeptime != null && this.waketime != null){
       let start = new Date(this.sleeptime);
@@ -33,10 +33,10 @@ export class OvernightsleepPage implements OnInit {
       }
       else{
         this.sleepService.logOvernightData(sleepdata);
-        this.presentSuccessAlert();
+        this.presentSuccessAlert(start,end);
       }
     }
-    else if (this.sleeptime == null || this.waketime == null ){
+    else {
       this.presentNullAlert();
     }
   }
@@ -63,15 +63,35 @@ export class OvernightsleepPage implements OnInit {
     await alert.present();
   }
 
-  async presentSuccessAlert() {
+  async presentSuccessAlert(start, end) {
+    let startAmOrPM = "am";
+    let endAmOrPM = "am";
+    let startHour = start.getHours();
+    let endHour = end.getHours();
+    let startMinutes = start.getUTCMinutes();
+    let endMinutes = end.getUTCMinutes();
+    if (startHour >= 12){
+      if (startHour != 12){
+        startHour = startHour-12
+      }
+      startAmOrPM = "pm";
+    }
+    if (endHour >= 12 ){
+      if (endHour != 12){
+        endHour = endHour-12
+      }
+      endAmOrPM = 'pm';
+    }
+    let startTime = `${startHour}:${startMinutes} ${startAmOrPM}`
+    let endTime = `${endHour}:${endMinutes} ${endAmOrPM}`
    const alert = await this.alertController.create({
      cssClass: 'successAlert',
      header: 'Saved!',
+     subHeader: `You slept from ${start.toLocaleDateString()} at ${startTime} to ${end.toLocaleDateString()} at ${endTime}.`,
      message: 'Your sleep was logged.',
      buttons: ['OK']
    });
 
     await alert.present();
    }
-
 }
