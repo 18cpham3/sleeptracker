@@ -22,7 +22,6 @@ export class SleepinessPage implements OnInit {
   }
 
   onSubmit(){
-
     if (this.StanfordSleepinessValue != null && this.sleeptime != null)  {
       let sleepinessValue = new StanfordSleepinessData(this.StanfordSleepinessValue);
       this.sleepService.logSleepinessData(sleepinessValue);
@@ -37,7 +36,7 @@ export class SleepinessPage implements OnInit {
    const alert = await this.alertController.create({
      cssClass: 'nullAlert',
      header: 'Incomplete Submission',
-     message: 'Please fill out your sleepiness value before submitting.',
+     message: 'Please complete all forms before submitting.',
      buttons: ['OK']
    });
 

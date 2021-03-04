@@ -20,7 +20,11 @@ https://ionicons.com/
 https://ionicons.com/usage
 https://ionicframework.com/docs/api/back-button
 https://ionicframework.com/docs/api/button
+https://ionicframework.com/docs/api/alert
+https://ionicframework.com/docs/api/datetime
+https://ionicframework.com/docs/api/textarea
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
+https://medium.com/@sergeybulavyk/managing-radio-buttons-in-ionic-3-a99102701bcd
 
 https://medium.com/uxcope/bottom-navigation-issue-on-ios-android-and-ux-8851ffe7260 (Design Rationale for not including a bottom navigation bar)
 
@@ -69,4 +73,3 @@ https://medium.com/uxcope/bottom-navigation-issue-on-ios-android-and-ux-8851ffe7
 
 
 14. Did you add any "extra" features, such as other data to log, the ability to edit or delete data, or changes to the styling of the app? If so, what did you add? How do these add to the experience of the app?
-
