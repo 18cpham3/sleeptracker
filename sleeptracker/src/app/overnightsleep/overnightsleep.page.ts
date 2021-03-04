@@ -70,20 +70,37 @@ export class OvernightsleepPage implements OnInit {
     let endHour = end.getHours();
     let startMinutes = start.getUTCMinutes();
     let endMinutes = end.getUTCMinutes();
-    if (startHour >= 12){
-      if (startHour != 12){
-        startHour = startHour-12
-      }
+
+    //convert to formatted h:mm am/pm
+
+    //startTime h:mm format
+    if (startHour > 12){
+      startHour = startHour-12
       startAmOrPM = "pm";
     }
-    if (endHour >= 12 ){
-      if (endHour != 12){
-        endHour = endHour-12
-      }
-      endAmOrPM = 'pm';
+    else if (startHour == 0){
+      startHour = 12
+    }
+
+    if (startMinutes <= 10){
+      startMinutes = `0${startMinutes}`
     }
     let startTime = `${startHour}:${startMinutes} ${startAmOrPM}`
+
+    //endTime h:mm format
+    if (endHour > 12 ){
+      endHour = endHour-12
+      endAmOrPM = 'pm';
+    }
+    else if (endHour == 0){
+      endHour = 12
+    }
+
+    if (endMinutes <= 10){
+      endMinutes = `0${endMinutes}`
+    }
     let endTime = `${endHour}:${endMinutes} ${endAmOrPM}`
+
    const alert = await this.alertController.create({
      cssClass: 'successAlert',
      header: 'Saved!',
