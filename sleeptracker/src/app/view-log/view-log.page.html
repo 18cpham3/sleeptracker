@@ -7,5 +7,12 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-segment (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="overnightsleep">
+    <ion-label>Overnight Sleep</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="sleepiness">
+    <ion-label>Sleepiness</ion-label>
+  </ion-segment-button>
+</ion-segment>
 </ion-content>
