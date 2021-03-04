@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-log.page.scss'],
 })
 export class ViewLogPage implements OnInit {
+  selection:string;
 
   constructor() { }
 
   ngOnInit() {
+    this.selection = "overnightsleep";
   }
 
 }

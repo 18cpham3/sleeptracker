@@ -7,12 +7,27 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment (ionChange)="segmentChanged($event)">
+  <ion-segment [(ngModel)]="selection">
   <ion-segment-button value="overnightsleep">
-    <ion-label>Overnight Sleep</ion-label>
+    <ion-label color="light">Sleep Log</ion-label>
   </ion-segment-button>
-  <ion-segment-button value="sleepiness">
-    <ion-label>Sleepiness</ion-label>
+  <ion-segment-button value="sleepiness" >
+    <ion-label color="light">Sleepiness Log</ion-label>
   </ion-segment-button>
 </ion-segment>
+
+<ion-text *ngIf="selection == 'overnightsleep'">
+  <ion-text color="light">Overnight Sleep Log</ion-text>
+  <form (ngSubmit)="onClear()">
+    <ion-button color="dark" type="clear">Clear</ion-button>
+  </form>
+</ion-text>
+
+<ion-text *ngIf="selection == 'sleepiness'">
+  <ion-text color="light">Sleepiness Log</ion-text>
+  <form (ngSubmit)="onClear()">
+    <ion-button color="dark" type="clear">Clear</ion-button>
+  </form>
+</ion-text>
+
 </ion-content>
