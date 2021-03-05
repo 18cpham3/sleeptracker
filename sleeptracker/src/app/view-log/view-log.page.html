@@ -1,20 +1,25 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Home" icon="chevron-back"></ion-back-button>
+      <ion-back-button color = "dark" text="Home" icon="chevron-back"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <h1>View Log</h1>
+
   <ion-segment [(ngModel)]="selection">
-  <ion-segment-button value="overnightsleep">
+  <ion-segment-button mode="ios" value="overnightsleep">
     <ion-label color="light">Sleep Log</ion-label>
   </ion-segment-button>
-  <ion-segment-button value="sleepiness" >
+  <ion-segment-button mode="ios" value="sleepiness" >
     <ion-label color="light">Sleepiness Log</ion-label>
   </ion-segment-button>
 </ion-segment>
+
 
 <ion-text *ngIf="selection == 'overnightsleep'">
   <ion-text color="light">Overnight Sleep Log</ion-text>
@@ -29,5 +34,7 @@
     <!-- <ion-button color="dark" type="clear">Clear</ion-button> -->
   </form>
 </ion-text>
+
+
 
 </ion-content>
