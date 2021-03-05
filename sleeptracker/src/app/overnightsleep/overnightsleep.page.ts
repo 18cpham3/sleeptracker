@@ -27,7 +27,9 @@ export class OvernightsleepPage implements OnInit {
     if (this.sleeptime != null && this.waketime != null){
       let start = new Date(this.sleeptime);
       let end = new Date(this.waketime);
-      let sleepdata = new OvernightSleepData(start, end);
+      let rating = this.sleepRating;
+      let notes = this.notes;
+      let sleepdata = new OvernightSleepData(start, end, rating, notes);
       if (end < start){
         this.presentErrorAlert();
       }

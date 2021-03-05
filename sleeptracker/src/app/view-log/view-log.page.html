@@ -22,17 +22,30 @@
 
 
 <ion-text *ngIf="selection == 'overnightsleep'">
+  <!-- <ng-container *ngFor="let data of sleepData"> -->
   <ion-text color="light">Overnight Sleep Log</ion-text>
-  <form (ngSubmit)="onClear()">
+  <ion-card *ngFor="let data of overnightSleepData">
+    {{data.dateString()}}
+    You slept for {{data.summaryString()}}
+    {{data.ratingString()}}
+    {{data.noteString()}}
+
+  </ion-card>
+  <!-- <form (ngSubmit)="onClear()"> -->
     <!-- <ion-button color="dark" type="clear">Clear</ion-button> -->
-  </form>
+  <!-- </form> -->
 </ion-text>
+<!-- <ng-container> -->
 
 <ion-text *ngIf="selection == 'sleepiness'">
   <ion-text color="light">Sleepiness Log</ion-text>
-  <form (ngSubmit)="onClear()">
+  <ion-card *ngFor="let data of stanfordSleepData">
+    {{data.dateString()}}
+    {{data.summaryString()}}
+  </ion-card>
+  <!-- <form (ngSubmit)="onClear()"> -->
     <!-- <ion-button color="dark" type="clear">Clear</ion-button> -->
-  </form>
+  <!-- </form> -->
 </ion-text>
 
 

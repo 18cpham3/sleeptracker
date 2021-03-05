@@ -7,13 +7,13 @@ import { SleepService } from '../services/sleep.service';
   styleUrls: ['./view-log.page.scss'],
 })
 export class ViewLogPage implements OnInit {
-  sleepData:any = SleepService.AllSleepData;
+  overnightSleepData:any = SleepService.AllOvernightData;
+  stanfordSleepData:any = SleepService.AllSleepinessData;
   selection:string;
 
   constructor(public sleepService:SleepService) { }
 
   ngOnInit() {
-    console.log(this.sleepData)
     this.selection = "overnightsleep";
   }
 
