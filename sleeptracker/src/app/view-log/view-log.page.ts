@@ -33,12 +33,13 @@ export class ViewLogPage implements OnInit {
      header: 'Resetting logged data',
      message: 'This will reset all logged data. Do you wish to proceed?',
      buttons: [
-       {
+        {
          text: 'Yes',
          handler: () => {
            this.overnightSleepData = [];
-         }
-       },
+           this.sleepService.clearOvernightSleepData();
+          }
+        },
         {
           text: 'Cancel',
           role: 'cancel',
@@ -59,7 +60,8 @@ export class ViewLogPage implements OnInit {
           {
           text: 'Yes',
           handler: () => {
-            this.stanfordSleepData = [];;
+            this.stanfordSleepData = [];
+            this.sleepService.clearSleepinessData();
             }
           },
          {
