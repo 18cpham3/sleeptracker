@@ -42,7 +42,7 @@
 <ion-text *ngIf="selection == 'sleepiness'">
   <ion-text color="light">Sleepiness Log</ion-text>
   <ion-card *ngFor="let data of stanfordSleepData">
-    Night of {{data.dateString()}}
+    {{data.dateString()}}
     <h2></h2>
     Sleepiness Scale Rating: {{data.summaryString()}}
   </ion-card>
