@@ -30,7 +30,19 @@ export class OvernightSleepData extends SleepData {
 	}
 
 	ratingString():string{
-			return `Sleep rating: ${this.sleepRating}`
+			if (this.sleepRating == 1){
+				return `Sleep rating: ${this.sleepRating} - Awful`
+			}
+			else if (this.sleepRating == 2){
+					return `Sleep rating: ${this.sleepRating} - Bad`
+			}
+			else if (this.sleepRating == 3){
+					return `Sleep rating: ${this.sleepRating} - Mediocre`
+			}
+			else if (this.sleepRating == 4){
+					return `Sleep rating: ${this.sleepRating} - Great`
+			}
+			return `Sleep rating: ${this.sleepRating} - Excellent`
 	}
 
 	noteString():string{

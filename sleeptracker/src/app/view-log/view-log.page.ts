@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SleepService } from '../services/sleep.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-view-log',
@@ -11,10 +12,65 @@ export class ViewLogPage implements OnInit {
   stanfordSleepData:any = SleepService.AllSleepinessData;
   selection:string;
 
-  constructor(public sleepService:SleepService) { }
+  constructor(public sleepService:SleepService,  public alertController:AlertController) { }
 
   ngOnInit() {
     this.selection = "overnightsleep";
   }
+
+  onResetSleepLog(){
+    this.warningAlertSleepLog();
+
+  }
+
+  onResetSleepinessLog(){
+    this.warningAlertSleepinessLog();
+  }
+
+  async warningAlertSleepLog() {
+   const alert = await this.alertController.create({
+     cssClass: 'warningAlert',
+     header: 'Resetting logged data',
+     message: 'This will reset all logged data. Do you wish to proceed?',
+     buttons: [
+       {
+         text: 'Yes',
+         handler: () => {
+           this.overnightSleepData = [];
+         }
+       },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+        }
+      ]
+    });
+
+     await alert.present();
+   }
+
+   async warningAlertSleepinessLog() {
+    const alert = await this.alertController.create({
+      cssClass: 'warningAlert',
+      header: 'Resetting logged data',
+      message: 'This will reset all logged data. Do you wish to proceed?',
+      buttons: [
+          {
+          text: 'Yes',
+          handler: () => {
+            this.stanfordSleepData = [];;
+            }
+          },
+         {
+           text: 'Cancel',
+           role: 'cancel',
+           cssClass: 'secondary',
+         }
+       ]
+     });
+
+      await alert.present();
+    }
 
 }
