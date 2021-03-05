@@ -23,6 +23,9 @@ https://ionicframework.com/docs/api/button
 https://ionicframework.com/docs/api/alert
 https://ionicframework.com/docs/api/datetime
 https://ionicframework.com/docs/api/textarea
+https://ionicframework.com/docs/api/segment
+https://ionicframework.com/docs/api/card
+https://ionicframework.com/docs/api/card-content
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 https://medium.com/@sergeybulavyk/managing-radio-buttons-in-ionic-3-a99102701bcd
 
