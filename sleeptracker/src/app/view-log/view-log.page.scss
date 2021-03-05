@@ -7,7 +7,32 @@ ion-content {
       text-align: center;
 }
 
-ion-segment-button{
-  --ion-background-color:rgba(255,255,255,0.1) !important;
-  --color: white !important;
+h1{
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+  margin:15%
 }
+
+ion-segment-button{
+  --ion-background-color:rgba(105, 103, 212,.9) !important;
+  --color: white !important;
+  height: 40px;
+  // margin-top: 45%;
+  margin-bottom: 10%;
+  --background: rgba(20, 21, 41, 0.7);
+}
+ion-label{
+  font-family: 'Varela', sans-serif;
+}
+ion-text{
+  // font-family: 'Cairo', sans-serif;
+  // font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Varela', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// div{
+//   background-color: rgba(255,255,255,0.1);
+// }
