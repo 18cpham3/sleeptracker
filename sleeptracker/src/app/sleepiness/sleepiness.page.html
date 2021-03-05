@@ -14,8 +14,7 @@
   </div>
   <ion-item class='ion-field'>
     <ion-icon class = "cal" name="calendar-outline" color="light" size="small">Date</ion-icon>
-    <ion-datetime display-format="DDD MMM D, YYYY" picker-format="MMM D YYYY" placeholder="Date" [(ngModel)]="sleeptime" name="sleeptime"></ion-datetime>
-  </ion-item>
+    <ion-datetime display-format="DDDD MMM D" picker-format="MMM D" placeholder="Date" [(ngModel)]="sleeptime" name="sleeptime"></ion-datetime>  </ion-item>
 
 
 <form (ngSubmit)="onSubmit()">
