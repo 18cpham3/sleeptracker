@@ -26,8 +26,9 @@ https://ionicframework.com/docs/api/textarea
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 https://medium.com/@sergeybulavyk/managing-radio-buttons-in-ionic-3-a99102701bcd
 
+--Design Stuff--
 https://medium.com/uxcope/bottom-navigation-issue-on-ios-android-and-ux-8851ffe7260 (Design Rationale for not including a bottom navigation bar)
-
+https://labs.tineye.com/color/713367984d23f3981c13743c62bf6949f7c9b0f5?ignore_background=True&color_format=hex&ignore_interior_background=True (Color palette image extractor for design)
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 
