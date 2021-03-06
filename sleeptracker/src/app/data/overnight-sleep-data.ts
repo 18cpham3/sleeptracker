@@ -46,9 +46,6 @@ export class OvernightSleepData extends SleepData {
 	}
 
 	noteString():string{
-		if (this.sleepNotes == "" || this.sleepNotes == null){
-			return "Notes: None"
-		}
 		return `Notes: ${this.sleepNotes}`
 	}
 }

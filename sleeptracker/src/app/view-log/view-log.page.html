@@ -26,11 +26,16 @@
   <ion-card *ngFor="let data of overnightSleepData">
     <ion-card-content>
     {{data.dateString()}}
+    <h2></h2>
     You slept for {{data.summaryString()}}
     <h2></h2>
     {{data.ratingString()}}
     <h2></h2>
+    <ng-container *ngIf="data.sleepNotes != undefined">
+      <ng-container *ngIf="data.sleepNotes != ''">
     {{data.noteString()}}
+      </ng-container>
+    </ng-container>
     </ion-card-content>
   </ion-card>
   <form (ngSubmit)="onResetSleepLog()">

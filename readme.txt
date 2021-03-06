@@ -26,6 +26,7 @@ https://ionicframework.com/docs/api/textarea
 https://ionicframework.com/docs/api/segment
 https://ionicframework.com/docs/api/card
 https://ionicframework.com/docs/api/card-content
+https://stackoverflow.com/questions/44287846/how-to-make-a-if-else-angular-template-with-only-ng-container
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 https://medium.com/@sergeybulavyk/managing-radio-buttons-in-ionic-3-a99102701bcd
 
