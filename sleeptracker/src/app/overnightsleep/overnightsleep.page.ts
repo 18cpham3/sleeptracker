@@ -17,10 +17,11 @@ export class OvernightsleepPage implements OnInit {
   constructor(public sleepService:SleepService, public alertController: AlertController) { }
 
   ngOnInit(){
+    this.sleepRating = 1;
   }
 
   getText(event) {
-    this.notes = event.target.value;
+    this.notes = event.target.value.trim();
   }
 
   onSubmit() {
