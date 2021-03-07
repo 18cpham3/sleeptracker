@@ -23,19 +23,19 @@
 
 <ion-text *ngIf="selection == 'overnightsleep'">
   <ion-text color="light">Overnight Sleep Log</ion-text>
-  <ion-card *ngFor="let data of overnightSleepData">
+  <ion-card *ngFor="let data of storedOvernightSleep | async">
     <ion-card-content>
-    {{data.dateString()}}
+    {{data.loggedTime}}
     <h2></h2>
-    You slept for {{data.summaryString()}}
+    You slept for {{data.sleepTime}}
     <h2></h2>
-    {{data.ratingString()}}
+    {{data.rating}}
     <h2></h2>
-    <ng-container *ngIf="data.sleepNotes != undefined">
-      <ng-container *ngIf="data.sleepNotes != ''">
-    {{data.noteString()}}
+      <ng-container *ngIf="data.notes.trim() != 'Note(s): undefined'">
+      <ng-container *ngIf="data.notes.trim() != 'Note(s):'">
+    {{data.notes}}
       </ng-container>
-    </ng-container>
+      </ng-container>
     </ion-card-content>
   </ion-card>
   <form (ngSubmit)="onResetSleepLog()">
@@ -46,11 +46,11 @@
 
 <ion-text *ngIf="selection == 'sleepiness'">
   <ion-text color="light">Sleepiness Log</ion-text>
-  <ion-card *ngFor="let data of stanfordSleepData">
+  <ion-card *ngFor="let data of storedSleepiness | async">
     <ion-card-content>
-    {{data.dateString()}}
+    {{data.loggedDate}}
     <h2></h2>
-    Sleepiness Scale Rating: {{data.summaryString()}}
+    Sleepiness Scale Rating: {{data.loggedSleepiness}}
     </ion-card-content>
   </ion-card>
   <form (ngSubmit)="onResetSleepinessLog()">

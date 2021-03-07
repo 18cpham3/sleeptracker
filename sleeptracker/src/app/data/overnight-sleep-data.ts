@@ -46,6 +46,6 @@ export class OvernightSleepData extends SleepData {
 	}
 
 	noteString():string{
-		return `Notes: ${this.sleepNotes}`
+		return `Note(s): ${this.sleepNotes}`
 	}
 }
