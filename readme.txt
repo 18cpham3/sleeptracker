@@ -58,24 +58,22 @@ https://labs.tineye.com/color/713367984d23f3981c13743c62bf6949f7c9b0f5?ignore_ba
 
 
 6. Did you design your app with a particular type of user in mind? If so, whom?
-
+No, we designed our app for all types of users.
 
 
 7. Did you design your app specifically for iOS or Android, or both?
-
+We designed our app for both.
 
 
 8. How can a person log overnight sleep in your app? Why did you choose to support logging overnight sleep in this way?
-
+A person can log overnight sleep by pressing the "Log My Sleep" button on the home page then on the overnight sleep log page they are instructed by the system to enter their sleep time & date, wake up time & date, sleep rating, sleep notes, and pressing the save button once they finish entering in their data. We choose to support logging overnight sleep this way because it would be predicatable for users to accurately predict that to log their sleep in a sleep tracking app they must enter the time and date their sleep took place on the overnight sleep page.
 
 
 9. How can a person log sleepiness during the day in your app? Why did you choose to support logging sleepiness in this way?
-
-
+A person can log sleepiness by pressing the "Log Sleepiness" button on the home page then on the sleepiness page they are instructed by the system to enter the date, select a radio dial for which sleepiness scale they feel they fall under, and pressing the save button once they finish entering in their data. We choose to support logging this way because it maintains consistency and standard since radio dials allows for a mutally exclusive list where the user must select exactly one choice.
 
 10. How can a person view the data they logged in your app? Why did you choose to support viewing logged data in this way?
-
-
+A person can log sleepiness sleep by pressing the "View Log" button on the home page and can choose between two tabs labeled as "sleep log" or "sleepiness log" which toggles the display of a particular log (sleep or sleepiness). We choose to support viewing logged data this way because we wanted to make users feel like they are in control of the data that is being displayed to them so simply not displaying all the data in both logs but just the one they wish to see. 
 
 11. Which feature choose--using a native device resource, backing up logged data, or both?
 Backing up logged data.
@@ -90,3 +88,4 @@ Logged data is backed up using Firebase.
 
 
 14. Did you add any "extra" features, such as other data to log, the ability to edit or delete data, or changes to the styling of the app? If so, what did you add? How do these add to the experience of the app?
+We did add "extra" features to the data to log since our overnight sleep can store and display user notes or sleep rating data. This feature adds to the experience of the app because it gives users the flexibility and efficiency of use since we support the logging of overnight sleep with different methods according to one's preference such as adding notes or rating the quality of sleep.
