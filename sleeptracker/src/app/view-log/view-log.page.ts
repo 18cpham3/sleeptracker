@@ -26,18 +26,14 @@ export class ViewLogPage implements OnInit {
 
   ngOnInit() {
     this.selection = "overnightsleep";
-    // console.log(this.overnightSleepData);
     this.overnightLog = {};
     this.sleepinessLog = {};
     this.createData();
     this.storeData();
-    // this.retrieveData();
   }
-
 
   onResetSleepLog(){
     this.warningAlertSleepLog();
-
   }
 
   onResetSleepinessLog(){
@@ -56,7 +52,6 @@ export class ViewLogPage implements OnInit {
            this.overnightSleepData = [];
            this.storedOvernightSleep = [];
            this.sleepService.clearOvernightSleepData();
-           // https://firebase.google.com/docs/firestore/manage-data/delete-data
            this.deleteDocs("overnightDataLog");
           }
         },
@@ -119,10 +114,6 @@ export class ViewLogPage implements OnInit {
 
     // stores data in sleeptracker project database
     storeData(){
-      // this.dbChange = this.db.collection('overnightDataLog').valueChanges();
-      // https://www.w3schools.com/jsref/jsref_forEach.asp
-      // https://stackoverflow.com/questions/921789/how-to-loop-through-a-plain-javascript-object-with-the-objects-as-members
-      // https://cloud.google.com/firestore/docs/manage-data/add-data
       for (let id in this.overnightLog){
         this.db.collection('overnightDataLog').doc(id).set({
           "sleepTime":this.overnightLog[id]['sleep'],
@@ -138,25 +129,10 @@ export class ViewLogPage implements OnInit {
           "loggedSleepiness":this.sleepinessLog[id]['loggedSleepiness'],
         });
       }
-
-
-
   }
 
-  //not complete, intended to get and update the data in the html page
-
-    // this.db.collection('overnightDataLog').get().subscribe((querySnapshot) => {
-    // querySnapshot.forEach((doc) => {
-    //     console.log("Current data: ", doc.data());
-    //   });
-    // });
-    // new OvernightSleepData(start, end, rating, notes)
-    // storedOvernightSleep
-
-
-    // delete logged data
+    // deletes logged data in sleeptracker project database
     deleteDocs(name){
-      // https://firebase.google.com/docs/firestore/query-data/get-data
       this.db.collection(name).get().subscribe((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         this.db.collection(name).doc(doc.id).delete();

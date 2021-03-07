@@ -1,4 +1,7 @@
 --Readme document for *author(s)*, *email(s)*, *UCI id(s)*--
+Canvas Group: A4 group 4
+1. Aleen Kiledjian; kiledjia@uci.edu; 71175899
+2. Cathy Pham; cathyp2@uci.edu; 12899267
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
@@ -16,6 +19,7 @@
 
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
+
 https://ionicons.com/
 https://ionicons.com/usage
 https://ionicframework.com/docs/api/back-button
@@ -26,9 +30,17 @@ https://ionicframework.com/docs/api/textarea
 https://ionicframework.com/docs/api/segment
 https://ionicframework.com/docs/api/card
 https://ionicframework.com/docs/api/card-content
+https://www.w3schools.com/jsref/jsref_forEach.asp
+https://stackoverflow.com/questions/921789/how-to-loop-through-a-plain-javascript-object-with-the-objects-as-members
 https://stackoverflow.com/questions/44287846/how-to-make-a-if-else-angular-template-with-only-ng-container
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
 https://medium.com/@sergeybulavyk/managing-radio-buttons-in-ionic-3-a99102701bcd
+https://angular.io/guide/observables
+https://stackoverflow.com/questions/49475288/how-to-retrieve-data-from-firebase-database-with-an-observable
+https://stackoverflow.com/questions/47953387/get-documents-names-in-firestore
+https://cloud.google.com/firestore/docs/manage-data/add-data
+https://firebase.google.com/docs/firestore/query-data/get-data
+https://firebase.google.com/docs/firestore/manage-data/delete-data
 
 --Design Stuff--
 https://medium.com/uxcope/bottom-navigation-issue-on-ios-android-and-ux-8851ffe7260 (Design Rationale for not including a bottom navigation bar)
@@ -66,15 +78,15 @@ https://labs.tineye.com/color/713367984d23f3981c13743c62bf6949f7c9b0f5?ignore_ba
 
 
 11. Which feature choose--using a native device resource, backing up logged data, or both?
-
+Backing up logged data.
 
 
 12. If you used a native device resource, what feature did you add? How does this feature change the app's experience for a user?
-
+N/A
 
 
 13. If you backed up logged data, where does it back up to?
-
+Logged data is backed up using Firebase.
 
 
 14. Did you add any "extra" features, such as other data to log, the ability to edit or delete data, or changes to the styling of the app? If so, what did you add? How do these add to the experience of the app?
