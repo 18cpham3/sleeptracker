@@ -17,9 +17,12 @@ export class ViewLogPage implements OnInit {
   overnightLog:any;
   sleepinessLog:any;
   num:number;
+  sleepnum:number;
 
   constructor(public sleepService:SleepService,  public alertController:AlertController, private db: AngularFirestore) {
-    this.num = 0;
+
+    this.num = 2;
+    this.sleepnum = 1;
     this.storedOvernightSleep = this.db.collection('overnightDataLog').valueChanges();
     this.storedSleepiness = this.db.collection('sleepinessDataLog').valueChanges();
   }
@@ -29,6 +32,7 @@ export class ViewLogPage implements OnInit {
     this.overnightLog = {};
     this.sleepinessLog = {};
     this.createData();
+    this.createSleepinessData();
     this.storeData();
   }
 
@@ -103,12 +107,15 @@ export class ViewLogPage implements OnInit {
         };
         this.num++;
       });
+    }
+
+    createSleepinessData(){
       let sleepinessLog = this.stanfordSleepData.forEach(element => {
-        this.sleepinessLog[`sleepData-${this.num}`] = {
+        this.sleepinessLog[`sleepData-${this.sleepnum}`] = {
           'loggedDate': element.dateString(),
           'loggedSleepiness': element.summaryString()
         };
-        this.num++;
+        this.sleepnum++;
       });
     }
 
@@ -131,7 +138,7 @@ export class ViewLogPage implements OnInit {
       }
   }
 
-    // deletes logged data in sleeptracker project database
+    // deletes logged data in sleeptracker database
     deleteDocs(name){
       this.db.collection(name).get().subscribe((querySnapshot) => {
       querySnapshot.forEach((doc) => {
