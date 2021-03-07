@@ -31,6 +31,7 @@ https://ionicframework.com/docs/api/segment
 https://ionicframework.com/docs/api/card
 https://ionicframework.com/docs/api/card-content
 https://www.w3schools.com/jsref/jsref_forEach.asp
+https://stackoverflow.com/questions/53399998/ionic-4-changing-ion-content-background-does-not-work
 https://stackoverflow.com/questions/921789/how-to-loop-through-a-plain-javascript-object-with-the-objects-as-members
 https://stackoverflow.com/questions/44287846/how-to-make-a-if-else-angular-template-with-only-ng-container
 https://www.youtube.com/watch?v=9v_yVGb41qU&ab_channel=SimonGrimm
